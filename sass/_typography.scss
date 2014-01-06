@@ -1,0 +1,18 @@
+body {
+	font-family: $base-font-family;
+	line-height: $base-line-height;
+}
+
+// who really likes underlines?
+a {
+	color: $green;
+	text-decoration: none;
+
+	&:visited, &:active {
+		color: adjust-hue( $green, 180 );
+	}
+	&:hover, &:focus {
+		color: adjust-hue( $green, -90 );
+		text-decoration: underline;
+	}
+}

@@ -1,0 +1,24 @@
+{
+    "name": "mattwiebe/soul",
+    "description": "A WordPress base theme for RESTful JavaScript templating",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mattwiebe/soul.git"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/mattwiebe/soul/issues"
+    },
+    "authors": [
+        {
+            "name": "Matt Wiebe",
+            "email": "wiebe@automattic.com",
+            "homepage": "http://wp.mattwie.be",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "mustache/mustache": "2.5.*"
+    }
+}

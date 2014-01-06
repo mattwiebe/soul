@@ -1,0 +1,29 @@
+@import 'base';
+@import 'normalize';
+@import 'helpers';
+@import 'typography';
+
+body {
+	background-color: $white;
+	color: $black;
+	margin: 0 auto 1em;
+	max-width: 33em;
+}
+img {
+	height: auto;
+	max-width: 100%;
+}
+article {
+	margin: 0 0 4em;
+}
+#colophon {
+	margin: 4em 0 2em;
+}
+nav > .nav {
+	float: left;
+	width: 45%;
+}
+nav > .next {
+	float: right;
+	text-align: right;
+}

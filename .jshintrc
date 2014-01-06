@@ -1,0 +1,23 @@
+{
+    "curly"         : true,
+    "eqeqeq"        : true,
+    "forin"         : true,
+    "immed"         : true,
+    "latedef"       : true,
+    "newcap"        : true,
+    "noarg"         : true,
+    "noempty"       : true,
+    "plusplus"      : true,
+    "regexp"        : true,
+    "undef"         : true,
+    "strict"        : true,
+    "trailing"      : true,
+    "browser"       : true,
+    "jquery"        : true,
+    "globalstrict"  : true,
+    "globals": {
+        "require" : false,
+        "module"  : true,
+        "exports" : true
+    }
+}

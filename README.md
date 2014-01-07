@@ -24,8 +24,8 @@ Everything installed? Cool, on your command line, type:
 ```
 git clone https://github.com/mattwiebe/soul.git YOUR_DIR
 cd YOUR_DIR
-composer install
 npm install
+grunt init
 ```
 
 (`YOUR_DIR` is a placeholder, and needs to be in `wp-content/themes/`.)

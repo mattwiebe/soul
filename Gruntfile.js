@@ -1,9 +1,13 @@
 'use strict';
 var _ = require( 'underscore' );
 module.exports = function( grunt ) {
+
 	var config = {
 		pkg: grunt.file.readJSON( 'package.json' )
 	};
+
+	// load all grunt tasks matching the `grunt-*` pattern
+	require( 'load-grunt-tasks' )( grunt );
 
 	config.sass = {
 		dev: {
@@ -61,7 +65,7 @@ module.exports = function( grunt ) {
 		dist: {
 			options: {
 				mangle: true,
-				report: 'gzip'
+				report: 'min'
 			},
 			files: {
 				'js/soul.min.js': [ 'js/soul.js' ]
@@ -121,9 +125,7 @@ module.exports = function( grunt ) {
 
 	grunt.initConfig( config );
 
-	// load all grunt tasks matching the `grunt-*` pattern
-	require( 'load-grunt-tasks' )( grunt );
-
 	grunt.registerTask( 'default', [ 'jshint', 'sass:dist', 'hogan', 'browserify:dist', 'uglify' ] );
+	grunt.registerTask( 'init', [ 'composer:install', 'jshint', 'sass', 'hogan', 'browserify', 'uglify' ] );
 
 };

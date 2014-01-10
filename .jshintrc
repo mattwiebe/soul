@@ -16,8 +16,10 @@
     "jquery"        : true,
     "globalstrict"  : true,
     "globals": {
-        "require" : false,
-        "module"  : true,
-        "exports" : true
+        "require"  : false,
+		"_"		   : false,
+		"Backbone" : false,
+        "module"   : true,
+        "exports"  : true
     }
 }

@@ -1,8 +1,6 @@
 'use strict';
-var Backbone = require( 'backbone' ),
-	Templates = require( './templates' ),
+var Templates = require( './templates' ),
 	Collections = require( './collections' ),
-	_ = require( 'underscore' ),
 	urls = require( './urls' ),
 	Post, Posts, Comments, Comment, MasterView;
 
@@ -38,6 +36,8 @@ MasterView = Backbone.View.extend({
 		} else {
 			this.renderModel();
 		}
+		this.trigger( 'content_rendored' );
+
 		return this;
 	},
 	renderCollection: function() {
@@ -47,10 +47,12 @@ MasterView = Backbone.View.extend({
 	},
 	renderModel: function() {
 		this.setElement( $( Templates[ this.template ].render( this.model.toJSON(), Templates ) ) );
+		this.trigger( 'content_rendored' );
 	},
 	partial: function( name, data ) {
 		data = data || {};
 		$( Templates[ name ].render( data, Templates ) ).appendTo( this.el );
+		this.trigger( 'content_rendored' );
 	}
 });
 

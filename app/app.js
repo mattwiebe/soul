@@ -1,11 +1,11 @@
 'use strict';
-var Backbone = window.Backbone = require( 'backbone' ),
-	Models = require( './models' ),
+var Models = require( './models' ),
 	Collections = require( './collections' ),
 	Views = require( './views' ),
-	_ = require( 'underscore' ),
+	moment = require( 'moment' ),
 	settings = window._Soul,
 	App;
+
 
 // help backbone not choke
 window.$ = Backbone.$ = window.jQuery;

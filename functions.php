@@ -8,8 +8,15 @@ if ( SOUL_LOCAL_DEV ) {
 	show_admin_bar( false );
 }
 
+// Needs to go first, checks to make sure everything will work on activation
+require __DIR__ . '/_activation.php';
+
+
 require __DIR__ . '/vendor/autoload.php';
-require __DIR__ . '/rest-faker.php';
+
+if ( class_exists('WP_JSON_Posts') ){
+	require __DIR__ . '/rest-faker.php';
+}
 
 function soul_render( $template, $data = array() ) {
 	static $mustache;

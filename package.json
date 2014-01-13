@@ -28,6 +28,7 @@
   "dependencies": {
     "backbone": "~1.1.0",
     "hogan.js": "~2.0.0",
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    "moment": "~2.5.0"
   }
 }

@@ -15,9 +15,7 @@ Did I mention this is alpha? This is a proof-of-concept. The blog index, paged v
 
 [^1]: This is hopefully a short-lived limitation.
 
-The set of commands below assumes you already have [Node](http://nodejs.org), [Composer][], [Sass](http://sass-lang.com/)[^2], and [grunt-cli](http://gruntjs.com/getting-started) installed. If you don't, go do that, and then come back and thank me for upping your developer game.
-
-[^2]: I *highly* recommend using Sass >= 3.3.x for its sourcemap support. At this time, it's hit RC2 and can be installed with `gem install sass --pre`. Combine with Chrome's sourcemap support and why yes you can buy me a drink.
+The set of commands below assumes you already have [Node](http://nodejs.org), [Composer][], and [grunt-cli](http://gruntjs.com/getting-started) installed. If you don't, go do that, and then come back and thank me for upping your developer game.
 
 Everything installed? Cool, on your command line, type:
 
@@ -78,9 +76,7 @@ And then you compile everything down into a single JS file for the browser. You 
 
 I think the days of not using a CSS preprocessor are over, and Sass is the best of breed in my mind. Disagree? Switch to another: this is a *starter* theme.
 
-I used to be a big advocate of Compass, but I never found myself leveraging much of its power: I expect even that to decrease as vendor prefixes die out. Also, plain Sass leaves open the future possibility of using [Libsass](http://libsass.org/)-based compilers (like [sassphp](https://github.com/sensational/sassphp) or [node-sass](https://github.com/andrew/node-sass)), thus dropping the Ruby requirement.[^4]
-
-[^4]: This is actually on the [verge of happening](https://github.com/andrew/node-sass/issues/194) for node-sass. This is great, since all Libsass compilers are quite a bit faster.
+I used to be a big advocate of Compass, but I never found myself leveraging much of its power: I expect even that to decrease as vendor prefixes die out. Also, plain Sass lets us use the [Libsass](http://libsass.org/)-based [node-sass](https://github.com/andrew/node-sass) compiler, meaning we don't require Ruby.[^4]
 
 ### WP REST API
 

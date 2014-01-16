@@ -15,17 +15,23 @@ module.exports = function( grunt ) {
 				'css/soul.css': 'sass/soul.scss'
 			},
 			options: {
-				style: 'expanded',
-				sourcemap: true
+				sourceComments: 'map'
 			}
 		},
 		dist: {
 			files: {
 				'css/soul.min.css': 'sass/soul.scss'
+			}
+		}
+	};
+
+	config.cssmin = {
+		dist: {
+			files: {
+				'css/soul.min.css': ['css/soul.min.css'],
 			},
 			options: {
-				style: 'compressed',
-				sourcemap: false
+				report: 'min'
 			}
 		}
 	};
@@ -125,7 +131,8 @@ module.exports = function( grunt ) {
 
 	grunt.initConfig( config );
 
-	grunt.registerTask( 'default', [ 'jshint', 'sass:dist', 'hogan', 'browserify:dist', 'uglify' ] );
+	grunt.registerTask( 'default', [ 'jshint', 'sass:dist', 'cssmin:dist', 'hogan', 'browserify:dist', 'uglify' ] );
 	grunt.registerTask( 'init', [ 'composer:install', 'jshint', 'sass', 'hogan', 'browserify', 'uglify' ] );
+	grunt.registerTask( 'css', [ 'sass', 'cssmin' ] );
 
 };

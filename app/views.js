@@ -4,6 +4,7 @@ var Backbone = require( 'backbone' ),
 	Collections = require( './collections' ),
 	_ = require( 'underscore' ),
 	urls = require( './urls' ),
+	bus = require( './bus' ),
 	Post, Posts, Comments, Comment, MasterView;
 
 MasterView = Backbone.View.extend({
@@ -38,6 +39,7 @@ MasterView = Backbone.View.extend({
 		} else {
 			this.renderModel();
 		}
+		bus.trigger( 'after_render' );
 		return this;
 	},
 	renderCollection: function() {
@@ -64,6 +66,7 @@ exports.Posts = Posts = MasterView.extend({
 	render: function() {
 		this.renderCollection();
 		this.partial( 'nav', urls.paginationUrls() );
+		bus.trigger( 'after_render' );
 		return this;
 	}
 });
@@ -89,6 +92,7 @@ exports.Single = MasterView.extend({
 		this.add( new Post({ model: this.model }).render() );
 		this.partial( 'comments/before' );
 		this.add( new Comments({ collection: this.comments }).render() );
+		bus.trigger( 'after_render' );
 		return this;
 	}
 });

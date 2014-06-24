@@ -4,6 +4,7 @@ var Backbone = window.Backbone = require( 'backbone' ),
 	Collections = require( './collections' ),
 	Views = require( './views' ),
 	_ = require( 'underscore' ),
+	timefix = require( './timefix' ),
 	settings = window._Soul,
 	App;
 

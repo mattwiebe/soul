@@ -1,7 +1,5 @@
 'use strict';
-var Backbone = require( 'Backbone' ),
-	_ = require( 'underscore' ),
-	bus = require( './bus' ),
+var	bus = require( './bus' ),
 	homeRe = new RegExp( '^' + window._Soul.home );
 
 module.exports = new ( Backbone.Router.extend({

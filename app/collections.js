@@ -1,6 +1,5 @@
 'use strict';
-var Backbone = require( 'Backbone' ),
-	settings = window._Soul,
+var	settings = window._Soul,
 	Models = require( './models' ),
 	bus = require( './bus' );
 

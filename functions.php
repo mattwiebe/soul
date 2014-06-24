@@ -28,7 +28,7 @@ function soul_enqueue() {
 	$version = SOUL_LOCAL_DEV ? mt_rand( 1, 10000 ) : SOUL_VERSION;
 
 	wp_enqueue_style( 'soul', "{$base_url}/css/soul{$min}.css", '', $version );
-	wp_enqueue_script( 'soul', "{$base_url}/js/soul{$min}.js", array( 'jquery' ), $version, true );
+	wp_enqueue_script( 'soul', "{$base_url}/js/soul{$min}.js", array( 'jquery', 'backbone', 'underscore' ), $version, true );
 
 	// in case we have a path-based home, we need this.
 	$url = parse_url( trailingslashit( home_url() ) );

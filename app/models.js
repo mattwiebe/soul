@@ -1,8 +1,6 @@
 'use strict';
-var Backbone = require( 'Backbone' ),
-	dateParse = require( './date-parse' ),
+var	dateParse = require( './date-parse' ),
 	parseable_dates = [ 'date', 'modified' ],
-	_ = require( 'underscore' ),
 	settings = window._Soul,
 	Post, User;
 
